@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="すきま時間に気になる知識を声で聴ける。お気に入りの知識は自分の声で発信しよう｜新感覚オーディオブックアプリ">
+		<meta name="keywords" content="Voce,オーディオブック,アプリ,配信">
+		<link rel="icon" type="image/x-icon" href="icon/1x/logo.png">
+		<title>Voce</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!-- Google Hosted LibrariesからjQuery取得 -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- ▲ローカルに保存したjQuery本体へのリンクでももちろんOK -->
+	</head>
+	<body>
+		<!-- 固定ヘッダ表示用のブロック -->
+		<div class="fix-header">
+		<div class="fix-header-contents">
+		<!-- ロゴはfloat左寄せで表示 -->
+			<div id="fix-header-logo">
+				<a href="index.html" class="suke"><img src="icon/1x/logo.png" alt="ロゴ"></a>
+			</div>
+		<!-- メニューのブロックはfloatで右寄せ -->
+			<div id="fix-header-menus" class="cf">
+				<ul id="scroll-fix-menu" class="menu">
+					<li><a href="#study" class="suke">学ぶ</a></li>
+					<li><a href="#search" class="suke">探す</a></li>
+					<li><a href="#arrival" class="suke">新着</a></li>
+					<li><a href="#newstab" class="suke">ニュース</a></li>
+				</ul>
+			</div>
+		</div>
+		</div>
+		<header id="header" class="header">
+			<div class="title">
+				<a href="index.html" class="suke"><img class="logo" src="icon/1x/logo.png" alt="ロゴ">
+				<h1>Voce</h1></a>
+			</div>
+			<div class="navi">
+				<nav>
+					<ul class="global-nav-list">
+						<li><a href="#study" class="suke">学ぶ</a></li>
+						<li><a href="#search" class="suke">探す</a></li>
+						<li><a href="#arrival" class="suke">新着</a></li>
+						<li><a href="#newstab" class="suke">ニュース</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<div class="box">
+      <div class="bgImg src1"></div>
+      <div class="bgImg src2"></div>
+      <div class="bgImg src3"></div>
+      <div class="bgImg src4"></div>
+      <div class="boxString">
+        <div class="marupadding">
+          <div class="maru">
+            <img src="topimage/1x/丸.png" alt="丸">
+            <div class="onmaru1"><span>声</span>と学ぶ</div>
+            <div class="onmaru2">声で<span>学</span>ぶ</div>
+          </div>
+        </div>
+        <div class="cc">
+          歴史も美術も自然も。<br>
+          知りたいことを好きな時に学ぶ。<br>
+          声で聴いて、声に出して<br>
+          知識を増やそう。<br>
+        </div>
+        <div class="download">  
+          <div class="apple"><a href="#" class="suke"><img src="icon/black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="AppStoreDownload"></a></div>
+          <div  class="googleicon"><a href="#" class="suke"><img src="icon/google-play-badge.png"alt="PlayStoreDownload"></a></div>
+        </div>
+      </div>
+    </div>
+			<h2 id="study">Voceで学ぶ</h2><br>
+			<script>
+				<!--
+				$('#study').css('visibility','hidden');
+				$(window).scroll(function(){
+				 var windowHeight = $(window).height(),
+				     topWindow = $(window).scrollTop();
+				 $('#study').each(function(){
+				  var targetPosition = $(this).offset().top;
+				  if(topWindow > targetPosition - windowHeight + 400){
+				   $(this).addClass("fadeInDown");
+				  }
+				 });
+				});
+				//-->
+			</script>
+			<div class="concept">
+				<div class="conbox">
+					<img id="rota" src="icon/1x/listen.png" alt="聞いて学ぶ">
+					<p>聞いて学ぶ</p>
+					<p>
+						気になるコンテンツを選び<br>
+						再生ボタンを押すだけ
+					</p>
+				</div>
+				<div class="conbox">
+					<img id="rota2" src="icon/1x/voice.png" alt="声に出して学ぶ">
+					<p class="conpad">声に出して学ぶ</p>
+					<p>
+						伝えたいコンテンツを<br>
+						声に出して配信
+					</p>
+				</div>
+			</div>
+			<script>
+				<!--
+				$('#rota').css('visibility','hidden');
+				$(window).scroll(function(){
+				 var windowHeight = $(window).height(),
+				     topWindow = $(window).scrollTop();
+				 $('#rota').each(function(){
+				  var targetPosition = $(this).offset().top;
+				  if(topWindow > targetPosition - windowHeight + 400){
+				   $(this).addClass("rotate");
+				  }
+				 });
+				});
+				//-->
+				<!--
+				$('#rota2').css('visibility','hidden');
+				$(window).scroll(function(){
+				 var windowHeight = $(window).height(),
+				     topWindow = $(window).scrollTop();
+				 $('#rota2').each(function(){
+				  var targetPosition = $(this).offset().top;
+				  if(topWindow > targetPosition - windowHeight + 400){
+				   $(this).addClass("rotate");
+				  }
+				 });
+				});
+				//-->
+			</script>
+			<div class="more"><a href="#" class="suke">>more</a></div>
+			<!--for Scroll fix header -->
+			<script>
+			//scroll fix header
+			$(function () {
+				"use strict";
+				var flag = "view";
+
+			  $(window).on("scroll", function () {
+			    // scrollTop()が「200」より大きい場合
+			   //画面トップから、ナビゲーションメニューまでの高さ（ピクセル）を指定すれば、メニュースクロールで
+			   //消えていくタイミングでヘッダが表示されて固定される。  
+			    
+			    if ($(this).scrollTop() > 550) {
+			      if (flag === "view") {
+			        $(".fix-header").stop().css({opacity: '1.0'}).animate({
+			   //”▲.fix-header”の部分は固定ヘッダとして表示させるブロックのID名もしくはクラス名に
+			          top: 0
+			        }, 500);
+
+			        flag = "hide";
+			      }
+			    } else {
+			      if (flag === "hide") {
+			        $(".fix-header").stop().animate({top:"-66px",opacity: 0}, 500);
+					//上にあがり切ったら透過度を0%にして背景が生きるように
+			        　　　　//”▲.fix-header”の部分は固定ヘッダとして表示させるブロックのID名もしくはクラス名に
+			        flag = "view";
+			      }
+			    }
+			  });
+			});
+			</script>
+			<h2 id="search">Voceを探す</h2>
+			<script>
+				<!--
+				$('#search').css('visibility','hidden');
+				$(window).scroll(function(){
+				 var windowHeight = $(window).height(),
+				     topWindow = $(window).scrollTop();
+				 $('#search').each(function(){
+				  var targetPosition = $(this).offset().top;
+				  if(topWindow > targetPosition - windowHeight + 400){
+				   $(this).addClass("fadeInDown");
+				  }
+				 });
+				});
+				//-->
+			</script>
+			<div class="search1">
+		        <ul class="huwa"> 
+		          <li class="huwaitem"><div class="photo">
+		            <a href="#"><img src="icon/1x/history.png" alt="歴史">
+		            <div class="title1">
+		              <p>歴史</p></a>
+		            </div>
+		          </div></li>
+		          <li class="huwaitem"><div class="photo">
+		            <a href="#"><img src="icon/1x/art.png" alt="美術">
+		            <div class="title1">
+		              <p>美術</p></a>
+		            </div>
+		          </div></li>
+		          <li class="huwaitem"><div class="photo">
+		            <a href="#"><img class="photopa" src="icon/1x/nature.png" alt="自然">
+		            <div class="title1">
+		              <p>自然</p></a>
+		            </div>
+		          </div></li>
+		        </ul>
+		      </div>
+		      <script>
+		        <!--
+			      $(window).scroll(function () {
+			    // クラスを追加するwindowの位置を設定
+			    var scrollTop = $(this).scrollTop();
+			    var scrollBottom = scrollTop + $(this).height();
+			    var effectPos = scrollBottom - 50;
+			    
+			    // eachでliを順番に処理
+			    $(".huwaitem").each(function (i) {
+			        if(effectPos > $(this).offset().top){
+			            var that = this;
+
+			            // 0.2s毎にずれて表示
+			            setTimeout(function () {
+			               $(that).addClass("fadein");
+			            }, 200 * i);
+			        }
+			    });
+			});
+		      //-->
+		    </script>
+			<h2 id="arrival">新着コンテンツ</h2>
+			<script>
+				<!--
+				$('#arrival').css('visibility','hidden');
+				$(window).scroll(function(){
+				 var windowHeight = $(window).height(),
+				     topWindow = $(window).scrollTop();
+				 $('#arrival').each(function(){
+				  var targetPosition = $(this).offset().top;
+				  if(topWindow > targetPosition - windowHeight + 400){
+				   $(this).addClass("fadeInDown");
+				  }
+				 });
+				});
+				//-->
+			</script>
+		    <div class="newarrival">
+			    <ul class="huwa2">
+			        <li class="huwaitem2"><div class="photo">
+		        	    <a href="#"><img src="icon/1x/matterhorn.png" alt="マッターホルン">
+			            <div class="title1">
+		    	          <p>マッターホルン</p></a>
+			           </div>
+		        	</div></li>
+					<li class="huwaitem2"><div class="photo">
+			       		<a href="#"><img src="icon/1x/fresco.png" alt="アテナイの学童">
+			            <div class="title1">
+			              <p>アテナイの学童</p></a>
+			            </div>
+			        </div></li>
+			        <li class="huwaitem2"><div class="photo">
+			            <a href="#"><img src="icon/1x/orion.png" alt="オリオン大星雲">
+			            <div class="title1">
+			              <p>オリオン大星雲</p></a>
+			            </div>
+			        </div></li>
+			        <li class="huwaitem2"><div class="photo">
+			            <a href="#"><img src="icon/1x/katana.png" alt="天下五剣">
+			            <div class="title1">
+			              天下五剣</a>
+			            </div>
+			        </div></li>
+			    </ul>
+		      </div>
+		      <script>
+        <!--
+      $(window).scroll(function () {
+    // クラスを追加するwindowの位置を設定
+    var scrollTop = $(this).scrollTop();
+    var scrollBottom = scrollTop + $(this).height();
+    var effectPos = scrollBottom - 50;
+    
+    // eachでliを順番に処理
+    $(".huwaitem2").each(function (i) {
+        if(effectPos > $(this).offset().top){
+            var that = this;
+
+            // 0.2s毎にずれて表示
+            setTimeout(function () {
+               $(that).addClass("fadein2");
+            }, 200 * i);
+        }
+    });
+});
+      //-->
+    </script>
+			<h2 id="newstab">NEWS</h2>
+			<div class="news">	
+				<script>
+					<!--
+					$('#newstab').css('visibility','hidden');
+					$(window).scroll(function(){
+					 var windowHeight = $(window).height(),
+					     topWindow = $(window).scrollTop();
+					 $('#newstab').each(function(){
+					  var targetPosition = $(this).offset().top;
+					  if(topWindow > targetPosition - windowHeight + 400){
+					   $(this).addClass("fadeInDown");
+					  }
+					 });
+					});
+					//-->
+				</script>
+				<div class="tab_wrap">
+					<input id="tab1" type="radio" name="tab_btn" checked>
+					<input id="tab2" type="radio" name="tab_btn">
+					<input id="tab3" type="radio" name="tab_btn">
+					<input id="tab4" type="radio" name="tab_btn">
+					<div class="tab_area">
+						<label class="tab1_label" for="tab1">すべて</label>
+						<label class="tab2_label borderl" for="tab2">歴史</label>
+						<label class="tab3_label borderl" for="tab3">自然</label>
+						<label class="tab4_label borderl" for="tab4">美術</label>
+					</div>
+					<div class="panel_area">
+						<div id="panel1" class="tab_panel">
+							<dl>
+								<dt>2020.11.10</dt>
+								<dd>自然に<a href="#">『マッターホルン』</a>を追加しました</dd>
+							</dl>
+							<dl>
+								<dt>2020.10.31</dt>
+								<dd>美術に<a href="#">『アテナイの学童』</a>を追加しました</dd>
+							</dl>
+							<dl>
+								<dt>2020.10.29</dt>
+								<dd>自然に<a href="#">『オリオン大星雲』</a>を追加しました</dd>
+							</dl>
+							<dl>
+								<dt>2020.10.27</dt>
+								<dd>美術に<a href="#">『天下五剣』</a>を追加しました</dd>
+							</dl>
+						</div>
+						<div id="panel2" class="tab_panel">
+							<dl>
+								<dt>2020.10.16</dt>
+								<dd><a href="#">『大政奉還』</a>を追加しました</dd>
+							</dl>
+							<dl>
+								<dt>2020.10.08</dt>
+								<dd><a href="#">『墾田永年私財法』</a>を追加しました</dd>
+							</dl>
+							<dl>
+								<dt>2020.10.02</dt>
+								<dd><a href="#">『ハプスブルク家』</a>を追加しました</dd>
+							</dl>
+							<dl>
+								<dt>2020.09.22</dt>
+								<dd><a href="#">『メソポタミア文明』</a>を追加しました</dd>
+							</dl>
+						</div>
+						<div id="panel3" class="tab_panel">
+							<dl>
+								<dt>2020.11.10</dt>
+								<dd><a href="#">『マッターホルン』</a>を追加しました</dd>
+							</dl>
+							<dl>
+								<dt>2020.10.29</dt>
+								<dd><a href="#">『オリオン大星雲』</a>を追加しました</dd>
+							</dl>
+							<dl>
+								<dt>2020.10.13</dt>
+								<dd><a href="#">『信濃川』</a>を追加しました</dd>
+							</dl>
+							<dl>
+								<dt>2020.10.02</dt>
+								<dd><a href="#">『阿蘇山』</a>を追加しました</dd>
+							</dl>
+						</div>
+						<div id="panel4" class="tab_panel">
+							<dl>
+								<dt>2020.10.31</dt>
+								<dd><a href="#">『アテナイの学童』</a>を追加しました</dd>
+							</dl>
+							<dl>
+								<dt>2020.10.27</dt>
+								<dd><a href="#">『天下五剣』</a>を追加しました</dd>
+							</dl>
+							<dl>
+								<dt>2020.10.18</dt>
+								<dd><a href="#">『縄文土器』</a>を追加しました</dd>
+							</dl>
+							<dl>
+								<dt>2020.10.09</dt>
+								<dd><a href="#">『東海道五十三次』</a>を追加しました</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2 id="sns1">SNS</h2>
+			<script>
+				<!--
+				$('#sns1').css('visibility','hidden');
+				$(window).scroll(function(){
+				 var windowHeight = $(window).height(),
+				     topWindow = $(window).scrollTop();
+				 $('#sns1').each(function(){
+				  var targetPosition = $(this).offset().top;
+				  if(topWindow > targetPosition - windowHeight + 400){
+				   $(this).addClass("fadeInDown");
+				  }
+				 });
+				});
+				//-->
+			</script>
+			<div class="sns">
+				<a href="#" class="suke"><img id="rota3" src="icon/twitter.png" alt="twittericon"></a>
+				<a href="#" class="suke"><img id="rota4" src="icon/facebook.png" alt="facebookicon"></a>
+			</div>
+			<script>
+					<!--
+				$('#rota3').css('visibility','hidden');
+				$(window).scroll(function(){
+				 var windowHeight = $(window).height(),
+				     topWindow = $(window).scrollTop();
+				 $('#rota3').each(function(){
+				  var targetPosition = $(this).offset().top;
+				  if(topWindow > targetPosition - windowHeight + 400){
+				   $(this).addClass("rotate");
+				  }
+				 });
+				});
+				//-->
+				<!--
+				$('#rota4').css('visibility','hidden');
+				$(window).scroll(function(){
+				 var windowHeight = $(window).height(),
+				     topWindow = $(window).scrollTop();
+				 $('#rota4').each(function(){
+				  var targetPosition = $(this).offset().top;
+				  if(topWindow > targetPosition - windowHeight + 400){
+				   $(this).addClass("rotate");
+				  }
+				 });
+				});
+				//-->
+			</script>
+		</main>
+		<footer>
+			<div class="download">	
+				<div class="apple"><a href="#" class="suke"><img src="icon/black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="AppStoreDownload"></a></div>
+				<div  class="googleicon"><a href="#" class="suke"><img src="icon/google-play-badge.png" alt="PlayStoreDownload"></a></div>
+			</div>
+			<div class="footermenu">
+				<a  class="footpa suke" href="#">利用規約</a>
+				<a href="#" class="footpa suke">プライバシーポリシー</a>
+				<a href="#" class="footpa suke">お問い合わせ</a>
+			</div>
+		</footer>
+	</body>
+</html>
