@@ -26,5 +26,5 @@ Adobe Photoshop<br>
 ロゴと聞いて学ぶロゴ、声に出して学ぶロゴはIllustratorを使用して作成<br>
 その他画像はフリー素材を使用<br>
 
-#開発言語
+# 開発言語
 HTML5 CSS jQuery Javascript<br>
